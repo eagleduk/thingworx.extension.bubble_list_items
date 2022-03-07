@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ExtensionPackages>
+        <ExtensionPackage dependsOn="" description="" minimumThingWorxVersion="9.1.0" name="BubbleListItems" packageVersion="1.0.0" vendor=""> 
+        </ExtensionPackage>
+    </ExtensionPackages>
+    <Widgets>
+        <Widget name="bubble_list_items">
+            <UIResources>
+                <FileResource description="" file="bubble_list_items.ide.js" isDevelopment="true" isRuntime="false" type="JS"/>
+                <FileResource description="" file="bubble_list_items.ide.css" isDevelopment="true" isRuntime="false" type="CSS"/>
+                <FileResource description="" file="bubble_list_items.runtime.js" isDevelopment="false" isRuntime="true" type="JS"/>
+                <FileResource description="" file="bubble_list_items.runtime.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+            </UIResources>
+        </Widget>
+    </Widgets>
+</Entities>

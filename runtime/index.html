@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        #bubble-list-item {
+            width: 100%;
+            /* height: 150px; */
+            border: 1px solid #909fb7;
+            border-radius: 4px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            /* padding: 10px; */
+            box-sizing: border-box;
+        }
+
+        #bubble-list-item section {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid rgb(9, 120, 255);
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            color: rgb(9, 120, 255);
+            border-radius: 10px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        #bubble-list-item section span {
+            margin: 0px 10px;
+        }
+
+        #bubble-list-item section span.item-title {
+            margin-right: 15px;
+        }
+
+        #bubble-list-item section span.item-delete {
+            cursor: pointer;
+            color: #646c74;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="LS.Mashup.Grp">
+        sss
+    </section>
+
+
+    <div id="bubble-list-item">
+
+    </div>
+
+    <input type="text" id="add"> <input type="button" value="추가">
+
+    <script>
+        const items = ["apple", "banana", "kiwi", "orange"];
+        const bubbleContent = document.querySelector("#bubble-list-item");
+
+        function addItem(item) {
+
+            const section = document.createElement("section");
+            // section.id = item;
+
+            const title = document.createElement("span");
+            title.className = "item-title";
+            title.innerText = item;
+
+            const del = document.createElement("span");
+            del.className = "item-delete";
+            del.innerText = "x"
+            del.addEventListener("click", (e) => {
+                e.target.parentNode.remove();
+            })
+
+            section.appendChild(title);
+            section.appendChild(del);
+
+            bubbleContent.appendChild(section);
+
+        }
+
+        document.addEventListener("DOMContentLoaded", (e) => {
+
+            for (let i = 0; i < 1; i++) {
+                items.forEach((item) => {
+                    addItem(item)
+                })
+            }
+
+            document.querySelector("input[type=button]").addEventListener("click", (e) => {
+                const value = document.querySelector("input#add").value;
+                addItem(value)
+            })
+        })
+
+    </script>
+</body>
+
+</html>
